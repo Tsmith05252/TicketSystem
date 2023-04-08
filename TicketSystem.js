@@ -71,14 +71,11 @@ app.post('/api/createTicket', function(req, res) {
         tags: req.body.tags 
     }
 
-    //res.json(newTick); 
+    //res.json(newTick) and push it to the server.  
     res.send(newTick); 
-
-});    
-
-
-/*
-   // write to the json file 
+    
+    
+     // write to the json file and update it with the new sample ticket. 
    const jsonString = JSON.stringify(newTicket)
    fs.writeFile('./tickets.json', jsonString, err => { //write to the tickets file 
        if (err) {
@@ -88,14 +85,15 @@ app.post('/api/createTicket', function(req, res) {
        }
    });
 
-   */
-
-   
-   
-   /*
-   // read the file 
+    // read the file 
    fs.readFile('./tickets.json', 'utf-8', (err, jsonString) => {
     console.log(jsonString);
     });
 
-    */
+
+});    
+
+
+
+ 
+   
