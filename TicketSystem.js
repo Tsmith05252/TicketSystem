@@ -54,7 +54,10 @@ app.get('/getTicket/:id', function(req, res) {
         "submitter": " Spock ", 
         "tags": ["enterprise", "emergency"]
     }
-
+    
+    // send the above ticket sample to the new json file. 
+    sendJSON(); 
+    
 // send in the data 
 app.post('/api/createTicket', function(req, res) {
    
@@ -71,10 +74,13 @@ app.post('/api/createTicket', function(req, res) {
         tags: req.body.tags 
     }
 
-    //res.json(newTick) and push it to the server.  
+    //res.json(newTick) and push it to the server using POSTMAN
     res.send(newTick); 
-    
-    
+
+});    
+
+
+    function sendJSON() {    
      // write to the json file and update it with the new sample ticket. 
    const jsonString = JSON.stringify(newTicket)
    fs.writeFile('./tickets.json', jsonString, err => { //write to the tickets file 
@@ -90,9 +96,7 @@ app.post('/api/createTicket', function(req, res) {
     console.log(jsonString);
     });
 
-
-});    
-
+    }
 
 
  
