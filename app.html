@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<title> Ticket System </title>
+<meta name="description" content= " Ticket System for CMPS 415  ">
+</head>
+
+<body>
+
+    <!-- Create a basic form structure to submit and display form information--> 
+
+    <div class="body">
+
+        <div id="form"> 
+            <!-- get the form information-->
+            <form>
+                <label for="fid">ID </label><br>
+                <input type="text" id="fid" name="fid"><br>
+
+                <label for="incident"> Incident Type </label><br>
+                <input type="text" id="incident" name="incident"><br>
+
+                <label for="subject"> Subject </label><br>
+                <input type="text" id="subject" name="subject"><br>
+
+                <label for="desc"> Incident Description </label><br>
+                <input type="text" id="desc" name="desc"><br>
+
+                <label for="priority"> Priority </label><br>
+                <select id="priority" name="priority">
+                    <option value="low"> Low </option>
+                    <option value="med"> Medium</option>
+                    <option value="high"> High </option>
+                </select> <br>
+
+                <label for="status"> Status</label><br>
+                <input type="text" id="status" name="status"><br>
+
+                <label for="recipient"> Recipient </label><br>
+                <input type="text" id=" recipient" name="recipient"><br>
+
+                <label for="submit"> Submitter </label><br>
+                <input type="text" id="submit" name="submit"><br>
+                
+                <label for="tags"> Tags</label><br>
+                <input type="text" id="tags" name="tags"><br>
+             
+            </form>
+
+              <!-- Submit Button-->
+              <button type="button"> Submit Form </button>
+
+        </div> <!-- end the form div -->  
+
+        
+        <div id="display">
+            <!-- display the form information-->
+            <p>   </p>
+            
+        </div> <!-- end the display div-->
+    
+    
+    </div>
+</body>
+</html>
